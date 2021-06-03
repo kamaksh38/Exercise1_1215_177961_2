@@ -35,7 +35,10 @@ public class CardTrick {
         System.out.print("Pick a card (value & suit): ");
         String pickedCard = input.nextLine();
         
+        System.out.println(pickedCard);
+        
         //Then report the result here
+        
     }
     
 }
