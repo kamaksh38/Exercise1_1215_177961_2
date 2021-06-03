@@ -23,22 +23,38 @@ public class CardTrick {
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
+            magicHand[i] = new Card();
             //c.setValue(insert call to random number generator here)
-            c.setValue((int)(Math.random() * 13) + 1); 
+            magicHand[i].setValue((int)(Math.random() * 13) + 1); 
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
+            magicHand[i].setSuit(Card.SUITS[(int)(Math.random() * 4)]);
         }
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
-        System.out.print("Pick a card (value & suit): ");
-        String pickedCard = input.nextLine();
         
-        System.out.println(pickedCard);
+        //System.out.print("Pick a card (value & suit): ");
+        //String pickedCard = input.nextLine();
+        //System.out.println(pickedCard);
+        
+        Card luckyCard = new Card(); 
+        luckyCard.setValue(2); 
+        luckyCard.setSuit(Card.SUITS[1]);
         
         //Then report the result here
         
+        boolean didWin = false; 
+        
+        for (int i = 0; i < magicHand.length; i++) {
+            if(luckyCard.getValue() == magicHand[i].getValue()
+                && luckyCard.getSuit().equals(magicHand[i].getSuit())) {
+                didWin = true;
+            } 
+        }
+        
+        String result = (didWin)? "You Won!" : "You lost";
+        
+        System.out.println(result);
     }
     
 }
