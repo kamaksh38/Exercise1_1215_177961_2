@@ -17,7 +17,6 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        
         for (int i=0; i<magicHand.length; i++)
         {
             Random r =  new Random();
@@ -34,14 +33,20 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter in Card Value: ");
-        String inputValue = in.nextLine();
-        int userValue = Integer.parseInt(inputValue);
-        System.out.println("Enter in Card Suit: ");
-        String inputSuit = in.nextLine();
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Hearts");
+        int result = 0;
+        for(int i=0;i<magicHand.length;i++){
+            if((luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit() == magicHand[i].getSuit())){
+                result = 1;
+            }
+        }
+        if(result == 1){
+            System.out.println("You Won!");
+        } else {
+            System.out.println("You Lost!");
+        }
         
-        System.out.println("You chose the " + userValue + " of " + inputSuit);
-    
     }
 }
