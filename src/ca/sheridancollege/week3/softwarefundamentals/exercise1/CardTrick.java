@@ -41,6 +41,7 @@ public class CardTrick {
         System.out.println("Enter in Card Suit: ");
         String inputSuit = in.nextLine();
         
+        System.out.println("You chose the " + userValue + " of " + inputSuit);
     
     }
 }
