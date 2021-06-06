@@ -59,5 +59,11 @@ public class Card {
                 && this.suit.equalsIgnoreCase(anotherCard.getSuit());
     }
     
+    /**
+     * @return a string with card suit and value
+     */
+    public String toString() {
+        return this.suit + " " + this.value;
+    }
 
 }
