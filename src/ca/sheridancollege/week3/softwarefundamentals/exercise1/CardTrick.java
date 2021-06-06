@@ -55,6 +55,7 @@ public class CardTrick {
         } else {
             System.out.println("Your lost.");
         }
+        System.out.printf("Your card was: %s.%n", myCard.toString());
     }
     
     /**
