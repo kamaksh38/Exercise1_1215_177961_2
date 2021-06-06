@@ -7,12 +7,14 @@ package ca.sheridancollege.week3.softwarefundamentals.exercise1;
 
 /**
  * A class that models playing card Objects. Cards have 
- * a value (note that Ace = 1, Jack -11, Queen =12, King = 13)
+ * a value (note that Ace = 1, Jack = 11, Queen = 12, King = 13)
  * A suit (clubs, hearts, spades, diamonds).
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
+ * @modifier Jiali Wang
+ * Student number: 991632365
  */
 public class Card {
 
@@ -48,6 +50,14 @@ public class Card {
         this.value = value;
     }
    
-   
+    /**
+     * @return if the card has same suite and value as another card
+     * @param anotherCard another card
+     */
+    public boolean equals(Card anotherCard) {
+        return this.value == anotherCard.getValue() 
+                && this.suit.equalsIgnoreCase(anotherCard.getSuit());
+    }
     
+
 }
