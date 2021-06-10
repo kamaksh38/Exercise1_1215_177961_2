@@ -36,22 +36,23 @@ public class CardTrick {
         //String pickedCard = sc.nextLine();
         //System.out.println(pickedCard);
         //Then report the result here
-        Card lcard = new Card();
-        lcard.setValue(10);
-        lcard.setSuit("Hearts");
-        int finalresult = 0;
+       Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Hearts");
+        int result = 0;
         for(int i=0;i<magicHand.length;i++){
-            if((lcard.getValue() == magicHand[i].getValue()) && (lcard.getSuit() == magicHand[i].getSuit())){
-                finalresult = 1;
+            if((luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit() == magicHand[i].getSuit())){
+                result = 1;
             }
         }
         
         //Prints result based on outcome
-        if(finalresult == 1){
+        if(result == 1){
             System.out.println("You Won!");
         } else {
             System.out.println("You Lost!");
         }
+        
     }
     
 }
