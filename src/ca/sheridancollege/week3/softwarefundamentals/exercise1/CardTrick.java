@@ -38,8 +38,8 @@ public class CardTrick {
         //System.out.println(pickedCard);
         //Then report the result here
         Card luckyCard = new Card(); 
-        luckyCard.setValue(2); 
-        luckyCard.setSuit(Card.SUITS[1]);
+        luckyCard.setValue(6); 
+        luckyCard.setSuit(Card.SUITS[2]);
         
         //Then report the result here
         
