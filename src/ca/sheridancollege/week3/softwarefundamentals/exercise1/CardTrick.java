@@ -20,13 +20,14 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
+      
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
-              magicHand[i].setValue((int)(Math.random() * 13) + 1); 
-              magicHand[i].setSuit(Card.SUITS[(int)(Math.random() * 4)]);
+            magicHand[i] = new Card();
             //c.setValue(insert call to random number generator here)
+            magicHand[i].setValue((int)(Math.random() * 13) + 1); 
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            magicHand[i].setSuit(Card.SUITS[(int)(Math.random() * 4)]);
         }
         
         //insert code to ask the user for Card value and suit, create their card
@@ -36,23 +37,24 @@ public class CardTrick {
         //String pickedCard = sc.nextLine();
         //System.out.println(pickedCard);
         //Then report the result here
-       Card luckyCard = new Card();
-        luckyCard.setValue(10);
-        luckyCard.setSuit("Hearts");
-        int result = 0;
-        for(int i=0;i<magicHand.length;i++){
-            if((luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit() == magicHand[i].getSuit())){
-                result = 1;
-            }
+        Card luckyCard = new Card(); 
+        luckyCard.setValue(2); 
+        luckyCard.setSuit(Card.SUITS[1]);
+        
+        //Then report the result here
+        
+        boolean youWin = false; 
+        
+        for (int i = 0; i < magicHand.length; i++) {
+            if(luckyCard.getValue() == magicHand[i].getValue()
+                && luckyCard.getSuit().equals(magicHand[i].getSuit())) {
+                youWin = true;
+            } 
         }
         
-        //Prints result based on outcome
-        if(result == 1){
-            System.out.println("You Won!");
-        } else {
-            System.out.println("You Lost!");
-        }
+        String finalresult = (youWin)? "You Won!" : "You lost";
         
+        System.out.println(finalresult);
     }
     
 }
