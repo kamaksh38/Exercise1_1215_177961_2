@@ -31,11 +31,27 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Pick a card (value & suit): ");
-        String pickedCard = sc.nextLine();
-        System.out.println(pickedCard);
+      //  Scanner sc = new Scanner(System.in);
+        //System.out.print("Pick a card (value & suit): ");
+        //String pickedCard = sc.nextLine();
+        //System.out.println(pickedCard);
         //Then report the result here
+        Card lcard = new Card();
+        lcard.setValue(10);
+        lcard.setSuit("Hearts");
+        int finalresult = 0;
+        for(int i=0;i<magicHand.length;i++){
+            if((lcard.getValue() == magicHand[i].getValue()) && (lcard.getSuit() == magicHand[i].getSuit())){
+                finalresult = 1;
+            }
+        }
+        
+        //Prints result based on outcome
+        if(finalresult == 1){
+            System.out.println("You Won!");
+        } else {
+            System.out.println("You Lost!");
+        }
     }
     
 }
