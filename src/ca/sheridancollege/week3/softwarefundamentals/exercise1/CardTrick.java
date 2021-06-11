@@ -53,6 +53,8 @@ public class CardTrick {
         }
         
         String finalresult = (youWin)? "You Won!" : "You lost";
+        /*if youwin is true prints "You won"
+            or else print "you lost"*/        
         
         System.out.println("The result is",finalresult);
     }
