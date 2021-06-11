@@ -34,8 +34,8 @@ public class CardTrick {
         // and search magicHand here
       //  Scanner sc = new Scanner(System.in);
         //System.out.print("Pick a card (value & suit): ");
-        //String pickedCard = sc.nextLine();
-        //System.out.println(pickedCard);
+        //String pCard = sc.nextLine();
+        //System.out.println(pCard);
         //Then report the result here
         Card luckyCard = new Card(); 
         luckyCard.setValue(6); 
@@ -54,7 +54,7 @@ public class CardTrick {
         
         String finalresult = (youWin)? "You Won!" : "You lost";
         
-        System.out.println(finalresult);
+        System.out.println("The result is",finalresult);
     }
     
 }
